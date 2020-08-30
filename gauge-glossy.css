@@ -1,0 +1,60 @@
+.gauge-glossy {
+    border: outset 4px #036564;
+    background: rgb(64, 244, 118);
+    background: linear-gradient(5deg, #033649, #036564);
+    text-shadow: 2px 2px 5px #0d3b3e;
+}
+
+.gauge-glossy .gauge {
+    opacity: 0.9;
+    border-color: #023332;
+    background: linear-gradient(-155deg, #036564, #033649);
+    color: rgb(46, 121, 114);
+}
+
+.gauge-glossy p, .gauge-glossy h1 {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    color: #12937b;
+}
+
+.gauge-glossy h1 {
+    font-size: 30px;
+}
+
+.gauge-glossy .gauge .labels .value-label {
+    color: white;
+}
+
+.gauge-glossy .gauge .needle {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0) 24%, rgba(255, 127, 80, 1) 24%, rgba(255, 127, 80, 1) 30%, rgba(0, 0, 0, 0) 50%);
+}
+
+.gauge-glossy .gauge .needle .needle-head {
+    background-color: rgb(255, 127, 80);
+}
+
+.gauge-glossy .gauge .ticks::before {
+    position: absolute;
+    top: 4px;
+    bottom: 8px;
+    left: 4px;
+    right: 8px;
+    background: linear-gradient(174deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 255, 255, .2));
+    content: '';
+    border-radius: 50%;
+}
+
+.gauge-glossy .gauge .ticks::after {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    background: linear-gradient(-40deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 255, 255, .9));
+    content: '';
+    border-radius: 50%;
+    z-index: 2;
+}
