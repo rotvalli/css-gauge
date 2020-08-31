@@ -17,5 +17,5 @@ else
     #Compose and add version info to example.html
     sed "s/GAUGE_VERSION/${1}/g" example-template.html > example.html
 
-    echo "Built with version numeber $1"
+    echo "Built with version number $1"
 fi

@@ -11,17 +11,19 @@
     <style>
         body {
             font-family: sans-serif;
-            background-color: #d8d8d8;            
+            background-color: #d8d8d8;
         }
 
         .gauge-example {
             display: flex;
             flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
         }
 
         .gauge-example>div {
             background-color: #ffffff;
-            width: 30%;
+            width: 48%;
             min-width: 350px;
             margin: 5px;
             text-align: center;
@@ -30,17 +32,32 @@
             font-size: 14px;
         }
 
-        .gauge-example>.gauge-description{
+        .gauge-example>.gauge-description {
             padding: 3em;
             text-align: left;
         }
 
-        .gauge-example>.gauge-description pre{
+        .gauge-example>.gauge-description pre {
             font-size: 12px;
         }
 
         .gauge {
             margin: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #c2c2c2;
+            text-align: center;
+            padding: 0.5em;
+            border-top: solid 1px #aeaeae;
+        }
+
+        footer a {
+            color: #0366d6;
         }
     </style>
 </head>
@@ -128,61 +145,19 @@
                     onInput="updateGauge('demoGauge2', 50, 150);" onChange="updateGauge('demoGauge2', 50, 150);" />
             </p>
         </div>
-        <div class="gauge-description">
-            <h1>Pure CSS gauge vGAUGE_VERSION</h1>
-            <p>Basic gauge component made with only CSS style rules. No SVG or canvas used in this component. 
-               This component can be easily themed by overriding default style rules and controlled through 
-               CSS variables and HTML markup elements. IE is not supported because CSS variables are not supported in it.</p>
-            <h2>Gauge parameters</h2>
-            <p>Gauge background color:
-            <pre>--gauge-bg:#dadada;</pre>
-            Gauge value (integer 0-100):
-            <pre>--gauge-value:50;</pre>
-            Gauge display value (integer 0-9999):
-            <pre>--gauge-display-value:50;</pre>
-            </p>
-<h2>How to use</h2>
-<p>Include <a href="gauge.min.css">gauge.min.css</a> to your page:</p>
-<pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;gauge.min.css?v=GAUGE_VERSION&quot;&gt;</pre>
-<p>Add some markup:</p>
-            <pre>
-&lt;div id=&quot;exampleGauge&quot; class=&quot;gauge&quot; 
-    style=&quot; --gauge-value:0; width:200px; height:200px;&quot;&gt;
-    &lt;div class=&quot;ticks&quot;&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:1;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:2;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:3;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:4;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:6;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:7;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:8;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;tithe&quot; style=&quot;--gauge-tithe-tick:9;&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;min&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;mid&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;max&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;tick-circle&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;needle&quot;&gt;
-        &lt;div class=&quot;needle-head&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;labels&quot;&gt;
-        &lt;div class=&quot;value-label&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-            </pre>
-        </div>
-
-    </div>
-    <script type="text/javascript">
-        //<![CDATA[
-        function updateGauge(id, min, max) {
-            const newGaugeDisplayValue = document.getElementById("gaugeValue-" + id).value;
-            const newGaugeValue = Math.floor(((newGaugeDisplayValue - min) / (max - min)) * 100);
-            document.getElementById(id).style.setProperty('--gauge-display-value', newGaugeDisplayValue);
-            document.getElementById(id).style.setProperty('--gauge-value', newGaugeValue);
-        }
+        <footer>
+            Pure CSS gauge vGAUGE_VERSION in <a href="https://github.com/rotvalli/css-gauge">Github</a>
+        </footer>
+        <script type="text/javascript">
+            //<![CDATA[
+            function updateGauge(id, min, max) {
+                const newGaugeDisplayValue = document.getElementById("gaugeValue-" + id).value;
+                const newGaugeValue = Math.floor(((newGaugeDisplayValue - min) / (max - min)) * 100);
+                document.getElementById(id).style.setProperty('--gauge-display-value', newGaugeDisplayValue);
+                document.getElementById(id).style.setProperty('--gauge-value', newGaugeValue);
+            }
         //]]>
-    </script>
+        </script>
 </body>
 
 </html>
