@@ -1,7 +1,7 @@
 # Pure CSS gauge v0.1
 Basic gauge component made with only CSS style rules. No SVG or canvas used in this component. This component can be easily themed by overriding default style rules and controlled through CSS variables and HTML markup elements. IE is not supported because CSS variables are not supported in it.
 
-![Core CSS gauge example](http://cssgauge.peukalo.net/cssgauge2.png)
+![Core CSS gauge example](http://cssgauge.peukalo.net/cssgauge3.png)
 
 [Live demo](http://cssgauge.peukalo.net/)
 
@@ -25,7 +25,7 @@ Gauge display value (integer 0-9999):
 Include gauge.min.css to your page:
 
 ```html
-<link rel="stylesheet" href="gauge.min.css?v=0.1">
+<link rel="stylesheet" href="gauge.min.css?v=0.2">
 ```
 Add some markup:
 ```html
