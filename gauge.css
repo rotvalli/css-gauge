@@ -110,17 +110,13 @@
 .gauge .labels .value-label {
     position: relative;
     top: 75%;
-    left: 51%;
-    width: 10%;
-    height: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .gauge .labels .value-label::after {
     counter-reset: gauge-value var(--gauge-display-value);
     content: counter(gauge-value);
-    text-align: right;
-    float: right;
-    width: 3em;
 }
 
 .guide-x, .guide-y {
