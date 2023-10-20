@@ -3,8 +3,8 @@
     background: var(--gauge-bg);
     border: 0.05em solid #222222;
     border-radius: 50%;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 100px;
+    min-height: 100px;
     font-weight: bold;
     font-size: 34px;
 }
@@ -65,6 +65,20 @@
     background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 15%);
 }
 
+.gauge .tick-circlebackground {
+    position: absolute;
+    top: 0.5%;
+    left: 0.5%;
+    width: calc(99%);
+    height: calc(99%);
+    border-left: 0em solid;
+    border-top: 0em solid;
+    border-right: 0em solid;
+    border-bottom: 0em solid transparent;
+    border-radius: 50%;
+    background: white;
+}
+
 .gauge .tick-circle {
     position: absolute;
     top: 15%;
@@ -76,6 +90,36 @@
     border-right: 0.1em solid;
     border-bottom: 0.1em solid transparent;
     border-radius: 50%;
+}
+
+.gauge .tick-circlegradient {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: calc(80%);
+    height: calc(80%);
+    border-left: 0em solid;
+    border-top: 0em solid;
+    border-right: 0em solid;
+    border-bottom: 0em solid transparent;
+    border-radius: 50%;
+    //background-image: linear-gradient(to right, #c0392b 0%, #f1c40f 50%, #1abc9c 100%);
+    background-image: conic-gradient(from -135deg, green 0deg, yellow 135deg, red 270deg, transparent 270deg, transparent 360deg );
+}
+
+.gauge .tick-circlegradient-mask {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: calc(70%);
+    height: calc(70%);
+    border-left: 0em solid;
+    border-top: 0em solid;
+    border-right: 0em solid;
+    border-bottom: 0em solid transparent;
+    border-radius: 50%;
+    //background-image: linear-gradient(to right, #c0392b 0%, #f1c40f 50%, #1abc9c 100%);
+    background: white;
 }
 
 .gauge .needle {
