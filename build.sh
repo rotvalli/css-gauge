@@ -14,6 +14,9 @@ else
     # Compress gauge-glossy.css
     cleancss -o gauge-glossy.min.css gauge-glossy.css
 
+    # Compress gauge-glossy.css
+    cleancss -o gauge-heat-scale.min.css gauge-heat-scale.css
+
     #Compose and add version info to example.html
     sed "s/GAUGE_VERSION/${1}/g" example-template.html > example.html
 

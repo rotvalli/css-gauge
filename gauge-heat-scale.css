@@ -1,0 +1,47 @@
+/**
+ * Version: 0.1
+ * Author: Alain Becam - 2023
+ * Github: https://github.com/abecam
+ * License: MIT
+ */
+.gauge .tick-circlebackground {
+    position: absolute;
+    top: 0.5%;
+    left: 0.5%;
+    width: calc(99%);
+    height: calc(99%);
+    border-left: 0em solid;
+    border-top: 0em solid;
+    border-right: 0em solid;
+    border-bottom: 0em solid transparent;
+    border-radius: 50%;
+    background: white;
+}
+
+.gauge .tick-circlegradient {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: calc(80%);
+    height: calc(80%);
+    border-left: 0em solid;
+    border-top: 0em solid;
+    border-right: 0em solid;
+    border-bottom: 0em solid transparent;
+    border-radius: 50%;
+    background-image: conic-gradient(from -135deg, green 0deg, yellow 135deg, red 270deg, transparent 270deg, transparent 360deg);
+}
+
+.gauge .tick-circlegradient-mask {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: calc(70%);
+    height: calc(70%);
+    border-left: 0em solid;
+    border-top: 0em solid;
+    border-right: 0em solid;
+    border-bottom: 0em solid transparent;
+    border-radius: 50%;
+    background: white;
+}

@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pure CSS gauge v0.2</title>
+    <title>Pure CSS gauge v0.2.1</title>
     <meta name="description" content="Pure CSS gauge">
     <meta name="author" content="Otto Salminen">
-    <link rel="stylesheet" href="gauge.min.css?v=0.2">
-    <link rel="stylesheet" href="gauge-glossy.min.css?v=0.2">
+    <link rel="stylesheet" href="gauge.min.css?v=0.2.1">
+    <link rel="stylesheet" href="gauge-glossy.min.css?v=0.2.1">
+    <link rel="stylesheet" href="gauge-heat-scale.min.css?v=0.2.1">
     <style>
         body {
             font-family: sans-serif;
@@ -18,7 +19,7 @@
             display: flex;
             flex-wrap: wrap;
             text-align: center;
-            justify-content: center;
+            justify-content: left;
         }
 
         .gauge-example>div {
@@ -145,8 +146,48 @@
                     onInput="updateGauge('demoGauge2', 50, 150);" onChange="updateGauge('demoGauge2', 50, 150);" />
             </p>
         </div>
+        <div>
+            <div>
+                <h1>Heat scale by <a href="https://github.com/abecam">abecam</a></h1>
+                <div id="demoGauge3" class="gauge" style="
+                --gauge-value:0;
+                width:200px;
+                height:200px;">
+
+                    <div class="tick-circlebackground"></div>
+                    <div class="tick-circlegradient"></div>
+                    <div class="tick-circlegradient-mask"></div>
+                    <div class="ticks">
+                        <div class="tithe" style="--gauge-tithe-tick:1;"></div>
+                        <div class="tithe" style="--gauge-tithe-tick:2;"></div>
+                        <div class="tithe" style="--gauge-tithe-tick:3;"></div>
+                        <div class="tithe" style="--gauge-tithe-tick:4;"></div>
+                        <div class="tithe" style="--gauge-tithe-tick:6;"></div>
+                        <div class="tithe" style="--gauge-tithe-tick:7;"></div>
+                        <div class="tithe" style="--gauge-tithe-tick:8;"></div>
+                        <div class="tithe" style="--gauge-tithe-tick:9;"></div>
+                        <div class="min"></div>
+                        <div class="mid"></div>
+                        <div class="max"></div>
+                    </div>
+                    <div class="tick-circle"></div>
+
+                    <div class="needle">
+                        <div class="needle-head"></div>
+                    </div>
+                    <div class="labels">
+                        <div class="value-label"></div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <label for="points">Value range 0-100</label><br />
+                <input type="range" id="gaugeValue-demoGauge3" name="gaugeValue" min="0" max="100" value="0"
+                    onInput="updateGauge('demoGauge3', 0, 100);" onChange="updateGauge('demoGauge3', 0, 100);" />
+            </p>
+        </div>
         <footer>
-            Pure CSS gauge v0.2 in <a href="https://github.com/rotvalli/css-gauge">Github</a>
+            Pure CSS gauge v0.2.1 in <a href="https://github.com/rotvalli/css-gauge">Github</a>
         </footer>
         <script type="text/javascript">
             //<![CDATA[
@@ -156,7 +197,7 @@
                 document.getElementById(id).style.setProperty('--gauge-display-value', newGaugeDisplayValue);
                 document.getElementById(id).style.setProperty('--gauge-value', newGaugeValue);
             }
-        //]]>
+            //]]>
         </script>
 </body>
 
